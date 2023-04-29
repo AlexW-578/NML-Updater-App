@@ -48,6 +48,9 @@ fn main() {
             update_all(neos_mods, &neos_dir);
             break;
         }
+        if mod_to_update.is_empty() || mod_to_update.to_uppercase().contains("Q") {
+            break;
+        }
         if mod_to_update.trim().parse::<i32>().is_err() {
             println!("Entered Text is not a number");
             main();
